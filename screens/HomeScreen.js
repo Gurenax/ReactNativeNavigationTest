@@ -2,6 +2,11 @@ import React, {Component} from 'react'
 import {StyleSheet, Text, View, Button} from 'react-native'
 
 class HomeScreen extends Component {
+  // Title for navigation bar
+  static navigationOptions = {
+    title: 'Home',
+  }
+
   render() {
     const navigate = this.props.navigation.navigate
     return (

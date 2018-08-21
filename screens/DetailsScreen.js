@@ -2,6 +2,11 @@ import React, {Component} from 'react'
 import {StyleSheet, Text, View, Button} from 'react-native'
 
 class DetailsScreen extends Component {
+  // Title for navigation bar
+  static navigationOptions = {
+    title: 'Details',
+  }
+
   render() {
     const { push, navigate, goBack, popToTop, getParam } = this.props.navigation
     const message = getParam('message', 'Default Message')
@@ -33,7 +38,7 @@ class DetailsScreen extends Component {
         <Button
           title="Go back"
           onPress={() => goBack()}/>
-          
+
         <Button
           title="Go back to Top Screen"
           onPress={() => popToTop()}/>
