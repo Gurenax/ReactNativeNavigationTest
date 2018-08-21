@@ -3,7 +3,6 @@ import {StyleSheet, Text, View} from 'react-native'
 
 class DetailsScreen extends Component {
   render() {
-    const styles = this.props.styles
     return (
       <View style={styles.container}>
         <Text>Details Screen</Text>
@@ -13,3 +12,11 @@ class DetailsScreen extends Component {
 }
 
 export default DetailsScreen
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
+})
