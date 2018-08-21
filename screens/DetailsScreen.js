@@ -8,7 +8,7 @@ class DetailsScreen extends Component {
   }
 
   render() {
-    const { push, navigate, goBack, popToTop, getParam } = this.props.navigation
+    const { push, navigate, goBack, popToTop, getParam, setParams } = this.props.navigation
     const message = getParam('message', 'Default Message')
 
     return (
@@ -30,6 +30,10 @@ class DetailsScreen extends Component {
           onPress={() => push('Details', {
             message: 'Hi World!'
           })}/>
+        
+        <Button
+          title="Update message to Cheers!"
+          onPress={() => setParams({message: 'Cheers!'})}/>
 
         <Button
           title="Go to Home"
