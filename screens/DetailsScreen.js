@@ -3,20 +3,37 @@ import {StyleSheet, Text, View, Button} from 'react-native'
 
 class DetailsScreen extends Component {
   render() {
-    const { push, navigate, goBack, popToTop } = this.props.navigation
-    
+    const { push, navigate, goBack, popToTop, getParam } = this.props.navigation
+    const message = getParam('message', 'Default Message')
+
     return (
       <View style={styles.container}>
         <Text>Details Screen</Text>
+        <Text>Message: {message}</Text>
         <Button
           title="Go to Details..again"
           onPress={() => push('Details')}/>
+
+        <Button
+          title="Go to Details with a Hello message"
+          onPress={() => push('Details', {
+            message: 'Hello World!'
+          })}/>
+
+        <Button
+          title="Go to Details with a Hi message"
+          onPress={() => push('Details', {
+            message: 'Hi World!'
+          })}/>
+
         <Button
           title="Go to Home"
           onPress={() => navigate('Home')}/>
+
         <Button
           title="Go back"
           onPress={() => goBack()}/>
+          
         <Button
           title="Go back to Top Screen"
           onPress={() => popToTop()}/>
