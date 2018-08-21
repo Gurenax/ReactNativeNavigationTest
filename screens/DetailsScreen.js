@@ -6,6 +6,7 @@ class DetailsScreen extends Component {
     const push = this.props.navigation.push
     const navigate = this.props.navigation.navigate
     const goBack = this.props.navigation.goBack
+    const popToTop = this.props.navigation.popToTop
     return (
       <View style={styles.container}>
         <Text>Details Screen</Text>
@@ -18,6 +19,9 @@ class DetailsScreen extends Component {
         <Button
           title="Go back"
           onPress={() => goBack()}/>
+        <Button
+          title="Go back to Top Screen"
+          onPress={() => popToTop()}/>
       </View>
     )
   }
