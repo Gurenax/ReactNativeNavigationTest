@@ -3,10 +3,8 @@ import {StyleSheet, Text, View, Button} from 'react-native'
 
 class DetailsScreen extends Component {
   render() {
-    const push = this.props.navigation.push
-    const navigate = this.props.navigation.navigate
-    const goBack = this.props.navigation.goBack
-    const popToTop = this.props.navigation.popToTop
+    const { push, navigate, goBack, popToTop } = this.props.navigation
+    
     return (
       <View style={styles.container}>
         <Text>Details Screen</Text>
