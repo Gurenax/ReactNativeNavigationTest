@@ -8,13 +8,19 @@ class HomeScreen extends Component {
   }
 
   render() {
+
     const navigate = this.props.navigation.navigate
+    
     return (
       <View style={styles.container}>
         <Text>Home Screen</Text>
         <Button
           title='Go to Details'
-          onPress={() => navigate('Details')}/>
+          onPress={() => navigate('Details')} />
+
+        <Button
+          title='Go to Header with Buttons'
+          onPress={() => navigate('HeaderWithButtons')} />
       </View>
     )
   }
